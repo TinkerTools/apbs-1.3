@@ -9,10 +9,10 @@ The "configure" script provided in this distribution is for use with the GNU com
 
 Use the following "configure" command to setup building of APBS with the libraries needed to link with Tinker. Please be sure to change the --prefix directory to the APBS 1.3 installation and --with-python option to the system Python 2 executable.
 
-       ./configure --enable-tinker --disable-zlib \
-       --prefix=$HOME/apbs-1.3 --with-python=/usr/bin/python2 \
-       CFLAGS=-DVAPBSQUIET CXXFLAGS=-DVAPBSQUIET \
-       FFLAGS=-DVAPBSQUIET
+     ./configure --enable-tinker --disable-zlib \
+     --prefix=$HOME/apbs-1.3 --with-python=/usr/bin/python2 \
+     CFLAGS=-DVAPBSQUIET CXXFLAGS=-DVAPBSQUIET \
+     FFLAGS=-DVAPBSQUIET
 
 After running "configure", use "make" and "make install" to build and install APBS. The libraries with APBS support for Tinker will be in the /lib and /contrib/lib subdirectories, and consist of libapbsmainroutines.a, libapbs.a, libmaloc.a and libapbsblas.a.
 
