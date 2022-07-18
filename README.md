@@ -1,21 +1,16 @@
 
-############################################
-Building APBS with or without Tinker Support
-############################################
+<H2><B>Building APBS with or without Tinker Support</B></H2>
 
 This directory contains a complete distribution of the APBS code for Poisson-Boltzmann calculations. To build APBS, run in order: "make distclean", "configure", "make" and "make install".
 
 The "configure" script provided in this distribution is for use with the GNU compilers on either Linux of macOS. For use with the Intel compilers, copy "configure-intel" to "configure". If using a Windows machine, copy "configure-windows" to "configure".
 
-#################################################
-Building APBS Libraries Needed for Tinker Support
-#################################################
+<H2><B>Building APBS Libraries Needed for Tinker Support</B></H2>
 
 Use the following "configure" command to setup building of APBS with the libraries needed to link with Tinker. Please be sure to change the --prefix directory to the APBS 1.3 installation and --with-python option to the system Python 2 executable.
 
        ./configure --enable-tinker --disable-zlib \
-       --prefix=/Users/ponder/apbs-1.3 \
-       --with-python=/usr/bin/python2 \
+       --prefix=$HOME/apbs-1.3 --with-python=/usr/bin/python2 \
        CFLAGS=-DVAPBSQUIET CXXFLAGS=-DVAPBSQUIET \
        FFLAGS=-DVAPBSQUIET
 
@@ -23,9 +18,7 @@ After running "configure", use "make" and "make install" to build and install AP
 
 You can then build a Tinker version with APBS capability by using Makefile-apbs from the /make area of the Tinker distribution. The /apbs/test directory contains benchmark tests and results for several small proteins when run from within Tinker.
 
-#############################################################
-Building APBS without Tinker Support (to use standalone APBS)
-#############################################################
+<H2><B>Building APBS without Tinker Support (to use standalone APBS)</B></H2>
 
 To create an APBS executable for Poisson-Boltzmann calculations, remove the --enable-tinker option to configure, and run the same commands listed above. The executable will be found in /bin. A static macOS executable is available as ./apbs-macos-1.3.tar.gz.
 
