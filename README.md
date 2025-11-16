@@ -1,7 +1,7 @@
 
 <H2><B>Building APBS with or without Tinker Support</B></H2>
 
-This directory contains a complete distribution of the APBS code for Poisson-Boltzmann calculations. To build APBS, run in order: "make distclean", "configure", "make" and "make install".
+This directory contains a complete distribution of the APBS code for Poisson-Boltzmann calculations. In particular this version 1.3 supports AMOEBA-style polarizable atomic multipoles in addition to the usual fixed atomic charges as the underlying electrostatic model. To build APBS, run in order: "make distclean", "configure", "make" and "make install".
 
 The "configure" script provided in this distribution is for use with the GNU compilers on either Linux of macOS. For use with the Intel compilers, copy "configure-intel" to "configure". If using a Windows machine, copy "configure-windows" to "configure".
 
